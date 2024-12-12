@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import validator from "validator"
 
-const ReservationSchema = new mongoose.Schema({
+const reservationSchema = new mongoose.Schema({
     firstName :{
         type : String,
         required : true,
@@ -39,6 +39,6 @@ const ReservationSchema = new mongoose.Schema({
         required : true
     }
 
-},{timstamps : true})
+})
 
-export const Reservation = mongoose.model("Reservation", ReservationSchema)
+export const Reservation = mongoose.model('Reservation',reservationSchema)

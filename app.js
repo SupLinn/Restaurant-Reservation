@@ -3,7 +3,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import { dbConnection } from "./database/dbConnection.js"
 import { errorMiddleware } from "./error/errorHandler.js"
-import reservationRouter from './routes/reservationRoute.js'
+import router from './routes/reservationRoute.js'
 
 const app = express()
 
@@ -20,7 +20,7 @@ app.use(
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.use('/api/v1/reservation', reservationRouter)
+app.use('/api/v1/reservation', router)
 
 dbConnection()
 app.use(errorMiddleware)
