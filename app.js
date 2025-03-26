@@ -11,8 +11,8 @@ dotenv.config({path: "./config/config.env"})
 
 app.use(
     cors({
-        origin: [process.env.FRONTEND_URI],
-        methods: ["POST"],
+        origin: process.env.FRONTEND_URI || "http://127.0.0.1:5173",
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true
     })
 )
