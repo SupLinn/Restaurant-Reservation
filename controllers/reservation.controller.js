@@ -8,9 +8,10 @@ export const sendReservation = async (req, res, next) =>{
     }
     try {
         await Reservation.create({firstName, lastName, email, phone, date, time})
-        res.status(200).json({
+        res.status(200).json({ data:{
                 success : true,
                 message : "Reservation Sent Successfully!",
+                }
             })
     } catch (error) {
         if (error.name === "ValidationError"){

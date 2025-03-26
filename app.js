@@ -11,11 +11,10 @@ dotenv.config({path: "./config/config.env"})
 
 app.use(
     cors({
-        origin: [process.env.FRONTEND_URI],
-        methods: ["POST"],
-        credentials: true
+      origin: "http://localhost:5173", 
+      credentials: true,
     })
-)
+  );
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
