@@ -18,7 +18,11 @@
     "cookie-parser": "^1.4.7",
 =======
     "axios": "^1.7.9",
+<<<<<<< HEAD
 >>>>>>> 9c60b95d4f68f80f532ed7a0860f018ceaf46a15
+=======
+    "body-parser": "^1.20.3",
+>>>>>>> fc27cd4f6cd7335aa2ad72fba6724d218d43ac1f
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
